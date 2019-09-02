@@ -1,6 +1,6 @@
 function anagrams(word, words) {
-  var result = [];
-  for(var element in words){
+  let result = [];
+  for(let element in words){
     if(words[element].length == word.length){
       if(word.split('').sort().join() == words[element].split('').sort().join()){
         result.push(words[element]);
