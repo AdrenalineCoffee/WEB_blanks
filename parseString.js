@@ -1,16 +1,16 @@
 //Входящая строка
-var twit = 'Прохожу курс на #coursera по #javascript';
+let twit = 'Прохожу курс на #coursera по #javascript';
 
 //Функция определяет наличие # в начале выбранного слоя
 function istwit(value) {
     if(value.startsWith('#')) {
-        var res = value.slice(1, value.length);
+        let res = value.slice(1, value.length);
         return res;
     }
 }
 
 //Парсим входящую строку на слова и ищем слова с #
-var result = twit.split(' ').filter(istwit);
+let result = twit.split(' ').filter(istwit);
 
 //У каждого слова с # удаляем в начале #
 result.forEach(function(element, index) { 
