@@ -1,6 +1,6 @@
 //Массив подаваемый на вход
-var arr = ['web', 'coursera', 'JavaScript', 'Coursera', 'script', 'programming', 'web'];
-var str = [];
+let arr = ['web', 'coursera', 'JavaScript', 'Coursera', 'script', 'programming', 'web'];
+let str = [];
 
 //Все элементы массива приводим к нижнему регистру
 arr.forEach(function(element,index) { 
