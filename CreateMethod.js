@@ -1,5 +1,5 @@
   function date(date) {
-    var sdf = new Date(Date.parse(date)); 
+    let sdf = new Date(Date.parse(date)); 
 
     return {
     add: function(param, time) {
@@ -33,7 +33,7 @@
     },
     get value() {
       //2017-04-20 14:00
-      var d = sdf,
+      let d = sdf,
           month = '' + (d.getMonth() + 1),
           day = '' + d.getDate(),
           year = '' + d.getFullYear(),
@@ -46,8 +46,8 @@
       if (hour.length < 2) hour = '0' + hour;
       if (minute.length < 2) minute = '0' + minute;
 
-      var fullyear = [year, month, day].join('-');
-      var fulltime = [hour, minute].join(':');
+      let fullyear = [year, month, day].join('-');
+      let fulltime = [hour, minute].join(':');
       return fullyear + " " + fulltime;
 
   },
@@ -56,7 +56,7 @@
   }
 
 
-var time = date('2017-05-16 13:45')
+let time = date('2017-05-16 13:45')
 .add(24, 'hours')
 
 .subtract(1, 'months')
