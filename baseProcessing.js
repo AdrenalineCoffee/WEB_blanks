@@ -1,4 +1,4 @@
-var friends = [
+let friends = [
   {
       name: 'Сэм',
       gender: 'Мужской',
@@ -45,8 +45,8 @@ var friends = [
 
 
 function query(collection) {
-  var massLib = [].slice.call(arguments);
-  var finalArray = collection;
+  let massLib = [].slice.call(arguments);
+  let finalArray = collection;
 
   for (i = 1; i < massLib.length; i++) {
     if (massLib[i].name == 'filterIn') {
@@ -64,20 +64,20 @@ return finalArray;
 
 
 function select() {
-  var fields = [].slice.call(arguments);
+  let fields = [].slice.call(arguments);
   return{
     name: 'select',
     act: function (inputArr){
-      var result = [];
+      let result = [];
       
-      for(var i = 0; i < fields.length; i++){
+      for(let i = 0; i < fields.length; i++){
         if(inputArr[0][fields[i]] === undefined) {
           fields.splice(i, 1);
         }
       }
       function sort(element){
-      var tag = {};
-      for(var i = 0; i< fields.length; i++){
+      let tag = {};
+      for(let i = 0; i< fields.length; i++){
           tag[fields[i]] = element[fields[i]];
       }
       result.push(tag);
@@ -90,13 +90,13 @@ function select() {
 
 
 function filterIn(property, values) {
-  var fields = [].slice.call(arguments[1]);
+  let fields = [].slice.call(arguments[1]);
   return{
     name: 'filterIn',
     act: function (inputArr){
-        var result = [];
+        let result = [];
         function sort(element){
-          for( var i = 0; i < fields.length; i++){
+          for( let i = 0; i < fields.length; i++){
             if(element[property] == fields[i]){
               result.push(element);
             }
